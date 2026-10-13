@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f4ef" />
+    <meta name="description" content="A little tic-tac-toe match against the computer." />
+    <title>Tic Tac Toe — Your move</title>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="wordmark" href="./" aria-label="Tic Tac Toe home"><span class="brand-mark">✳</span> little games</a>
+        <span class="top-note"><span class="online-dot"></span> READY WHEN YOU ARE</span>
+      </header>
+
+      <section class="game-card" aria-labelledby="game-title">
+        <div class="eyebrow"><span>01</span><span class="eyebrow-line"></span><span>THE CLASSIC</span></div>
+        <h1 id="game-title">Tic tac <span>toe.</span></h1>
+        <p class="intro">A tiny game of wits. Can you outsmart the computer?</p>
+
+        <div class="players" aria-label="Players">
+          <div class="player active" id="human-player"><span class="player-symbol">×</span><span class="player-copy"><strong>You</strong><small>PLAYER ONE</small></span><span class="turn-indicator" aria-hidden="true"></span></div>
+          <div class="versus">VS</div>
+          <div class="player" id="computer-player"><span class="player-symbol computer-symbol">○</span><span class="player-copy"><strong>Computer</strong><small>PLAYER TWO</small></span><span class="turn-indicator" aria-hidden="true"></span></div>
+        </div>
+
+        <div class="status-row" aria-live="polite" aria-atomic="true"><span class="status-icon" id="status-icon">✳</span><p id="status-message">Your turn — pick a square</p></div>
+        <div class="board" id="board" role="grid" aria-label="Tic-tac-toe board">
+          <button class="cell" role="gridcell" data-index="0" aria-label="Top left, empty"></button>
+          <button class="cell" role="gridcell" data-index="1" aria-label="Top center, empty"></button>
+          <button class="cell" role="gridcell" data-index="2" aria-label="Top right, empty"></button>
+          <button class="cell" role="gridcell" data-index="3" aria-label="Middle left, empty"></button>
+          <button class="cell" role="gridcell" data-index="4" aria-label="Center, empty"></button>
+          <button class="cell" role="gridcell" data-index="5" aria-label="Middle right, empty"></button>
+          <button class="cell" role="gridcell" data-index="6" aria-label="Bottom left, empty"></button>
+          <button class="cell" role="gridcell" data-index="7" aria-label="Bottom center, empty"></button>
+          <button class="cell" role="gridcell" data-index="8" aria-label="Bottom right, empty"></button>
+        </div>
+        <button class="reset-button" id="reset-button"><span aria-hidden="true">↻</span> Start a new game</button>
+        <p class="footer-note">NO PRESSURE. IT'S JUST A GAME. <span>♡</span></p>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
