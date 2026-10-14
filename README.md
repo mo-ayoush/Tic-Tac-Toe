@@ -30,3 +30,29 @@ npm test
 ```
 
 Jest tests the game rules, draw detection, and computer move selection. Build output goes to `dist/`, which is ignored by Git.
+
+## Build and run with Docker
+
+Build the multi-stage Docker image from the project directory:
+
+```bash
+docker build -t tic-tac-toe .
+```
+
+Start the container and map port 8080 on your computer to port 80 in the container:
+
+```bash
+docker run --rm -d --name tic-tac-toe-app -p 8080:80 tic-tac-toe
+```
+
+Open <http://localhost:8080> to try the game. To check that the web server responds, run:
+
+```bash
+curl -I http://localhost:8080
+```
+
+Stop the container when you're done:
+
+```bash
+docker stop tic-tac-toe-app
+```
